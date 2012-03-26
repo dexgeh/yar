@@ -1,0 +1,11 @@
+
+sample usage:
+router = require('./yar').create()
+
+router.get /^\/test$/, (req, res) ->
+    res.end 'test'
+
+router.post /^\/(.*)$/, (req, res) ->
+    res.end req.match[1]
+
+and so on..
